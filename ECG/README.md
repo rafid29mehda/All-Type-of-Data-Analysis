@@ -58,6 +58,205 @@ wfdb.plot_wfdb(record=record, title='ECG signal')
 
 ---
 
+# ✅ 1. ECG Data Formats (In-Depth)
+
+ECG data is collected by medical devices that record the **electrical signals of the heart**. Depending on the manufacturer, clinical setup, or public dataset, ECG data is saved in different file formats.
+
+### 🔍 Key Goals of ECG Data Formats:
+- Store raw ECG waveform signals
+- Include **metadata** like sampling rate, lead names
+- Sometimes include **annotations** (e.g., arrhythmia labels, beat types)
+
+---
+
+## 📦 Common ECG File Formats
+
+### 1. `.dat` + `.hea` (Used in PhysioNet/MIT-BIH)
+- **.dat**: Binary file containing raw ECG signal
+- **.hea**: Text-based header file
+  - Sampling frequency
+  - Number of signals (channels/leads)
+  - Units (mV, etc.)
+  - Signal lengths
+  - Patient ID
+- **.atr** or **.qrs**: Annotation files with labels (e.g., R-peaks, rhythm)
+
+✅ **Example (100.hea file):**
+```
+100 2 360 650000
+100.dat 212 200 11 1024 928 -474 0 MLII
+100.dat 212 200 11 1024 928 -474 0 V5
+# 2 leads, 360 Hz sampling rate, 650000 samples
+```
+
+---
+
+### 2. `.mat` (MATLAB format)
+- Stores signals as matrices (common in deep learning datasets)
+- Contains:
+  - ECG waveform as an array
+  - Sampling frequency
+  - Optional annotations or labels
+- Can be read in **Python** using `scipy.io`
+
+✅ Example:
+```python
+from scipy.io import loadmat
+mat = loadmat('ecg_record.mat')
+print(mat.keys())
+```
+
+---
+
+### 3. `.csv` (Comma-Separated Values)
+- Easy to read/edit manually or in Python
+- Rows represent time points, columns represent leads/signals
+- May include timestamp or sample index
+
+✅ Example CSV structure:
+```
+Time, Lead1, Lead2
+0.00, 0.15, 0.22
+0.01, 0.13, 0.21
+```
+
+---
+
+### 4. `.edf` (European Data Format)
+- Common in sleep studies and biomedical signals
+- Stores multiple signal channels
+- Includes patient info, timestamps, labels
+- Readable with `pyEDFlib` in Python
+
+---
+
+### 5. `.xml`, `.json`, `.txt`
+- Sometimes used by hospital-grade ECG machines
+- XML/JSON includes metadata + signal + annotations
+- `.txt` often used for raw values without structure
+
+---
+
+## 📚 Summary Table
+
+| Format | Description | Libraries to Read | Used in |
+|--------|-------------|-------------------|---------|
+| `.dat` + `.hea` | Binary signal + header | `wfdb` | PhysioNet |
+| `.mat` | MATLAB matrix format | `scipy.io` | China ECG, PhysioNet |
+| `.csv` | Easy table format | `pandas`, `numpy` | Custom datasets |
+| `.edf` | Multi-signal format | `pyEDFlib` | Sleep/EEG/ECG |
+| `.xml`, `.json` | Structured metadata | `xml.etree`, `json` | Vendor-specific |
+
+---
+
+# ✅ 2. How to Read ECG Data (Step-by-Step)
+
+
+---
+
+### 🔹 A. Reading PhysioNet (.dat + .hea + .atr) with `wfdb`
+
+Install the library:
+
+```bash
+pip install wfdb
+```
+
+#### ✅ Load an ECG record:
+```python
+import wfdb
+
+# Load ECG signal (360 Hz, 2 channels)
+record = wfdb.rdrecord('100', pn_dir='mitdb')
+print(record.__dict__)
+```
+
+#### ✅ Plot ECG signal:
+```python
+wfdb.plot_wfdb(record=record, title='ECG Signal - MITDB Record 100')
+```
+
+#### ✅ Load annotations (e.g., R-peaks, beat labels):
+```python
+annotation = wfdb.rdann('100', 'atr', pn_dir='mitdb')
+print(annotation.symbol)  # e.g., ['N', 'V', 'A']
+```
+
+---
+
+### 🔹 B. Reading `.mat` (MATLAB) ECG Files
+
+```python
+from scipy.io import loadmat
+
+mat = loadmat('ecg_data.mat')
+ecg_signal = mat['val']  # or check keys with mat.keys()
+```
+
+Tip: Normalize the signal for ML:
+
+```python
+normalized = (ecg_signal - ecg_signal.mean()) / ecg_signal.std()
+```
+
+---
+
+### 🔹 C. Reading `.csv` ECG Files
+
+```python
+import pandas as pd
+
+df = pd.read_csv('ecg_data.csv')
+print(df.head())
+
+# Plot lead
+import matplotlib.pyplot as plt
+plt.plot(df['Lead1'])
+plt.title("ECG - Lead1")
+plt.show()
+```
+
+---
+
+### 🔹 D. Reading `.edf` ECG Files
+
+```python
+import pyedflib
+
+f = pyedflib.EdfReader('ecg_record.edf')
+n = f.signals_in_file
+signal_labels = f.getSignalLabels()
+
+for i in range(n):
+    ecg = f.readSignal(i)
+```
+
+---
+
+## ⚠️ Important Notes:
+- Always check **sampling rate** (`fs` or `frequency`) from metadata
+- Some records are multi-lead (e.g., Lead I, II, III) — treat each column
+- Use **filters** before ML modeling (remove noise, baseline wander)
+
+---
+
+## ✅ Example Workflow (MIT-BIH):
+
+```python
+import wfdb
+
+# Load ECG + annotations
+record = wfdb.rdrecord('100', pn_dir='mitdb')
+annotation = wfdb.rdann('100', 'atr', pn_dir='mitdb')
+
+# Plot with annotations
+wfdb.plot_wfdb(record=record, annotation=annotation,
+               title='MIT-BIH ECG with Annotations')
+```
+
+
+---
+
 ## ✅ 4. How to Analyze ECG Data
 
 ### 🧠 Main Goals of ECG Analysis:
