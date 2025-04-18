@@ -1,6 +1,4 @@
-Here’s a detailed document you can copy-paste into your notebook for studying ECG (Electrocardiogram) data and its integration with machine learning:
 
----
 
 # 📄 All About ECG Data: Format, Analysis, Processing, and Machine Learning Integration
 
