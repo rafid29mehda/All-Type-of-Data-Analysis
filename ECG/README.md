@@ -202,6 +202,3 @@ You can take the MIT-BIH dataset, extract R-R intervals and QRS durations, then 
 - wfdb Python Docs: https://wfdb.readthedocs.io/en/latest/
 - NeuroKit2: https://neuropsychology.github.io/NeuroKit/
 
----
-
-Let me know if you'd like me to help you build your first ECG ML model or write a project outline.
