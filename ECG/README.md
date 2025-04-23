@@ -6,7 +6,7 @@
 
 ## ✅ 1. What is ECG Data?
 
-**ECG (Electrocardiogram)** is a medical recordings of the electrical activity of the heart over a period of time. It’s used to monitor heart conditions like arrhythmias, heart attacks, and more.
+**ECG (Electrocardiogram)** is a medical recording of the electrical activity of the heart over a period of time. It’s used to monitor heart conditions like arrhythmias, heart attacks, and more.
 
 **Key components of an ECG waveform:**
 - **P wave** – Atrial depolarization
