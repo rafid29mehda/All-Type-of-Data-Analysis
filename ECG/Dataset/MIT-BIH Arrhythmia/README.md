@@ -69,7 +69,7 @@ Records 102, 104, 107, and 217 include paced beats (from pacemakers), which are 
 
 ---
 
-### **Data Quality and Artifacts**
+## **Data Quality and Artifacts**
 - **Noise Sources**:
   - **60 Hz Noise**: From playback (appears at 30 Hz in records digitized at double speed).[](https://physionet.org/physiobank/database/html/mitdbdir/intro.htm)
   - **Tape Artifacts**: Low-frequency artifacts (e.g., 0.167 Hz, 0.090 Hz) from analog tape playback.[](https://physionet.org/physiobank/database/html/mitdbdir/intro.htm)
