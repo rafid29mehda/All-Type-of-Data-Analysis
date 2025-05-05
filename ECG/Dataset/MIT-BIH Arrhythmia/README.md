@@ -45,7 +45,7 @@ The MIT-BIH Arrhythmia Database consists of **48 half-hour ECG recordings** from
 
 ---
 
-### **File Listing**
+## **File Listing**
 The dataset directory ([Index of /static/published-projects/mitdb/1.0.0/](https://www.physionet.org/static/published-projects/mitdb/1.0.0/)) contains files for each record, named by a three-digit identifier (e.g., 100, 101, ..., 234). Example files for record 100:
 - **100.dat**: Signal data (1.95 MB).
 - **100.hea**: Header file (143 bytes).
