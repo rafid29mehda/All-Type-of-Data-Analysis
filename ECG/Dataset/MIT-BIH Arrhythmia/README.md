@@ -13,7 +13,7 @@ The **MIT-BIH Arrhythmia Database** (version 1.0.0), hosted on PhysioNet at [htt
 
 ---
 
-### **Dataset Structure**
+## **Dataset Structure**
 The MIT-BIH Arrhythmia Database consists of **48 half-hour ECG recordings** from 47 subjects (one subject has two recordings). Each recording includes:
 
 1. **ECG Signals**:
