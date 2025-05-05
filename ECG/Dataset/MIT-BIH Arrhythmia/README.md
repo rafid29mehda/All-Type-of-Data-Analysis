@@ -95,7 +95,7 @@ Records 102, 104, 107, and 217 include paced beats (from pacemakers), which are 
 
 ---
 
-### **Applications and Use Cases**
+## **Applications and Use Cases**
 The MIT-BIH Arrhythmia Database is a cornerstone for biomedical signal processing and machine learning in cardiology. Common applications include:
 1. **Arrhythmia Detection**:
    - Developing and testing algorithms to classify heartbeats (e.g., normal vs. ventricular ectopic) or detect rhythm changes (e.g., atrial fibrillation).[](https://github.com/hsd1503/PhysioNet)
