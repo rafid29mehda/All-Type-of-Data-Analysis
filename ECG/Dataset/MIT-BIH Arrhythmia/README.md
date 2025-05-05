@@ -81,7 +81,7 @@ Records 102, 104, 107, and 217 include paced beats (from pacemakers), which are 
 
 ---
 
-### **Access and Tools**
+## **Access and Tools**
 - **Access Policy**: The dataset is freely available under an open-access policy. No login is required to download files.[](https://physionet.org/content/mitdb/1.0.0/)
 - **Download Methods**:
   - **ZIP File**: 73.5 MB, containing all records.[](https://physionet.org/content/mitdb/1.0.0/)
