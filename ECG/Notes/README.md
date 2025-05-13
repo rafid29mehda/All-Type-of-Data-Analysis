@@ -1,4 +1,4 @@
-credir: https://www.youtube.com/watch?v=rXiJqm2eFfY
+credit: https://www.youtube.com/watch?v=rXiJqm2eFfY
 
 ![image](https://github.com/user-attachments/assets/064ebf13-7647-42e3-8e69-7923331e8ca7)
 
