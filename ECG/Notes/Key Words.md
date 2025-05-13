@@ -93,7 +93,7 @@ Let’s break down each wave in **PQRST**:
 * **What it represents**: The **Q-wave** represents the initial part of the **depolarization** of the **ventricles** (the bottom chambers of the heart).
 * **What happens**:
 
-  * After the atria contract, the electrical signal travels to the **AV node** and then to the **bundle of His**, which splits into the right and left bundle branches and then moves to the **Purkinje fibers** in the ventricles.
+  * After the atria contract, the electrical signal travels to the Atrioventricular (**AV node**) and then to the **bundle of His**, which splits into the right and left bundle branches and then moves to the **Purkinje fibers** in the ventricles.
   * The **Q-wave** is the first small **downward deflection** that marks the start of **ventricular depolarization**.
 * **Normal duration**: Normally, the Q-wave is small or absent in many people.
 * **Position on the ECG**: The Q-wave is the **first downward deflection** before the R-wave.
