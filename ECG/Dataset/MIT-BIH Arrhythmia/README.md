@@ -1,4 +1,4 @@
-The **MIT-BIH Arrhythmia Database** (version 1.0.0), hosted on PhysioNet at [https://www.physionet.org/content/mitdb/1.0.0/](https://www.physionet.org/content/mitdb/1.0.0/), is a widely used dataset for studying cardiac arrhythmias through electrocardiogram (ECG) signals. Below is a detailed analysis of the dataset, covering its structure, characteristics, and potential uses, based on the provided references and general knowledge of the dataset.
+The **MIT-BIH Arrhythmia Database** (version 1.0.0), hosted on PhysioNet at [https://www.physionet.org/content/mitdb/1.0.0/](https://www.physionet.org/content/mitdb/1.0.0/), is a widely used dataset for studying cardiac arrhythmias through electrocardiogram (ECG) signals. Below is a detailed analysis of the dataset, covering its structure, characteristics, and uses, based on the provided references and general knowledge of the dataset.
 
 ---
 
