@@ -17,7 +17,7 @@ The **MIT-BIH Arrhythmia Database** (version 1.0.0), hosted on PhysioNet at [htt
 The MIT-BIH Arrhythmia Database consists of **48 half-hour ECG recordings** from 47 subjects (one subject has two recordings). Each recording includes:
 
 1. **ECG Signals**:
-   - **Number of Channels**: Two ECG signals per recording (dual-lead ECG, typically leads like MLII and V1 or V5).
+   - **Number of Channels**: Two ECG signal per recording (dual-lead ECG, typically leads like MLII and V1 or V5).
    - **Sampling Rate**: 360 Hz per channel, chosen to facilitate 60 Hz notch filtering for noise reduction.[](https://physionet.org/physiobank/database/html/mitdbdir/intro.htm)
    - **Resolution**: 11-bit resolution over a ±5 mV range, with sample values ranging from 0 to 2047 (1024 corresponds to 0 volts).[](https://physionet.org/physiobank/database/html/mitdbdir/intro.htm)
    - **Storage Format**: Signals are stored in **.dat** files, using a packed 12-bit amplitude format (originally 8-bit first differences, reconstructed for this version).[](https://physionet.org/physiobank/database/html/mitdbdir/intro.htm)
