@@ -154,4 +154,4 @@ The MIT-BIH Arrhythmia Database is a cornerstone for biomedical signal processin
 ---
 
 ### **Conclusion**
-The MIT-BIH Arrhythmia Database is a foundational resource for ECG research, offering 48 annotated recordings with dual-lead ECG signals from 47 subjects. Its strengths lie in its detailed annotations, open access, and extensive use in arrhythmia detection and signal processing. However, its limitations, such as outdated recording methods and small sample size, suggest it should be used alongside modern datasets for comprehensive studies. Researchers can leverage WFDB tools, PhysioNet’s visualization platforms, and preprocessing techniques to maximize its utility.
+The MIT-BIH Arrhythmia Database is a foundational resource for ECG research, offering 48 annotated recordings with dual-lead ECG signals from 47 subjects. Its strengths lie in its detailed annotations, open access, and extensive use in arrhythmia detection and signal processing. However, its limitations, such as outdated recording methods and small sample size, suggest it should be used alongside modern datasets for comprehensive studies. Researchers can leverage WFDB tools.
